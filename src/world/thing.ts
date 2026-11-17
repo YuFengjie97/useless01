@@ -240,7 +240,8 @@ export function cubeParticle(scene: THREE.Scene) {
     const pos = rotate(positionLocal, vec3(time.mul(5)))
     pos.mulAssign(scale.oneMinus())
 
-    return pos.addAssign(posBuffer.element(instanceIndex))
+    pos.addAssign(posBuffer.element(instanceIndex))
+    return pos
   })()
 
   mat.colorNode = Fn(() => {
