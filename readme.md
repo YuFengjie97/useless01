@@ -1,4 +1,4 @@
-# 没什么乱用系列01
+# 没什么卵用系列01
 
 > 从这里抄的创意, https://www.bilibili.com/video/BV1ixWX6zEgn?spm_id_from=333.788.videopod.sections&vd_source=fa3e53afdd22a46cb913f37964bbceef
 
