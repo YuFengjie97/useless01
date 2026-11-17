@@ -6,20 +6,20 @@ import { gui } from '@/utils/guiPane';
 
 export function getRenderPipeline() {
 
-  const strength = uniform(.3)
-  const radius = uniform(.2)
-  const threshold = uniform(.8) 
+  const strength = uniform(.8)
+  const radius = uniform(.1)
+  const threshold = uniform(1.) 
 
   const renderPipeline = new THREE.RenderPipeline(renderer);
   const scenePass = pass(scene, camera);
   const scenePassColor = scenePass.getTextureNode("output");
   const bloomPass = bloom(scenePassColor, strength.value, radius.value, threshold.value);
   renderPipeline.outputNode = scenePassColor.add(bloomPass);
+  // renderPipeline.outputNode = scenePassColor
 
   bloomPass.strength = strength
   bloomPass.radius = radius
   bloomPass.threshold = threshold
-
 
 
   const f = gui.addFolder('Bloom')
